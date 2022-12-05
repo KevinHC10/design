@@ -1,0 +1,1 @@
+var swiper=new Swiper(".blogGridSlider",{grabCursor:!0,effect:"creative",loop:!0,creativeEffect:{prev:{shadow:!0,translate:[0,0,-400]},next:{translate:["100%",0,0]},autoplay:{delay:2500,disableOnInteraction:!1}}});

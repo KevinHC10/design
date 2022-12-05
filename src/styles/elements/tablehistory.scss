@@ -1,0 +1,54 @@
+.table {
+    border-collapse:separate !important;
+    
+    border-radius: .5rem;
+    overflow: hidden;
+
+    thead{
+
+        background-color: rgba(224, 224, 224, .5);
+        tr{
+            th{
+                font-weight: 500;
+                color: var(--neutral-400);
+            }
+        }
+        
+    }
+
+    
+    tbody{
+        tr {
+            transition: .1s ease-out;
+
+            .id {
+                color: var(--neutral-400);
+            }
+            .regdate, .procdate, .holddate {
+                font-size: .8rem;
+                font-weight: 500;
+            }
+            .transfer, .amount {
+                font-weight: 700;
+            }
+
+            &.deposit{
+                .transfer, .amount {
+                    color: var(--primary-500);
+                }
+                &:hover{
+                    background-color: var(--primary-100);
+                }
+            }
+            &.withdraw{
+                .transfer, .amount {
+                    color: var(--neutral-500);
+                }
+
+                &:hover{
+                    background-color: rgba(224, 224, 224, .5);
+                }
+            }
+        }
+    }
+}

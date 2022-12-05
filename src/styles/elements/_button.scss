@@ -1,0 +1,79 @@
+
+@mixin btn-style-nav{
+    padding: .75rem 1rem;
+    margin: 0;
+    border-radius: .5rem;
+    border: none;
+
+    font-size: 1rem;
+    color: var(--primary-500);
+
+    transition: .1s ease-out;
+
+    &:hover {
+        background-color: var(--primary-100) !important;
+    }
+
+    &.active {
+        font-weight: 700;
+        color:  var(--white);
+        background-color: var(--primary-500) !important;
+
+        &:hover{
+            background-color: var(--primary-400) !important;
+        }
+    }
+}
+
+@mixin btn-style-btn{
+    padding: .75rem 2rem;
+    margin: 0;
+    border-radius: .5rem;
+    border: none;
+
+    font-size: .8rem;
+    background-color: var(--black) !important;
+    color: var(--white);
+    font-weight: 600;
+
+    transition: .1s ease-out;
+
+    &:hover {
+        background-color: var(--neutral-700) !important;
+    }
+}
+
+@mixin btn-style-hollowbtn{
+    padding: .75rem 2rem;
+    margin: 0;
+    border-radius: .5rem;
+    border: 1px solid var(--black) !important;
+
+    font-size: .8rem;
+    color:  var(--black) !important;
+    font-weight: 600;
+
+    transition: .1s ease-out;
+
+    &:hover {
+        background-color: var(--neutral-200) !important;
+    }
+}
+
+@mixin btn-style-txtbtn{
+    padding: .75rem 2rem;
+    margin: 0;
+    border-radius: .5rem;
+    border: none;
+
+    font-size: .8rem;
+    background-color: transparent !important;
+    color:  var(--primary-500) !important;
+    font-weight: 600;
+
+    transition: .1s ease-out;
+
+    &:hover {
+        background-color: var(--primary-100) !important;
+    }
+}

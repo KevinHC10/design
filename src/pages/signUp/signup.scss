@@ -1,0 +1,12 @@
+.signup-wrapper{
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .input-form{
+    width: 350px;
+    .error-message{
+      color: blue;
+    }
+  }
+}

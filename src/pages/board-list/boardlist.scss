@@ -1,0 +1,14 @@
+.boardlist-wrapper{
+  padding: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  .board{
+    cursor: Pointer;
+    &:hover{
+      background: hwb(215 71% 24%);
+    }
+    .text-right{
+      text-align: right;
+    }
+  }
+}

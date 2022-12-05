@@ -1,0 +1,24 @@
+.comments-wrapper {
+
+  .add-comment {
+    margin: 15px 0;
+    h1 {
+      font-weight: bold;
+      color: blueviolet;
+    }
+    .comment-input {
+      textarea {
+        resize: none;
+        height: 1em;
+      }
+      margin-bottom: 10px;
+    }
+  }
+  .comment-list{
+    padding: 15px;
+    background-color: white;
+    .comment-content{
+      font-size:1.5em;
+    }
+  }
+}

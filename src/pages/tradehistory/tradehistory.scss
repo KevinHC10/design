@@ -1,0 +1,158 @@
+@use "./../../styles/elements/input";
+@import "./../../styles/elements/tablehistory.scss";
+
+.inaccount-wrapper{
+  padding: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  .inaccount{
+    cursor: Pointer;
+    &:hover{
+      background: aquamarine;
+    }
+    .text-right{
+      text-align: right;
+    }
+  }
+}
+
+.section{
+
+  
+  .wrapper-history{
+    background-color: transparent !important;
+
+    padding: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+
+    box-sizing: border-box;
+
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-column-gap: .5rem;
+      grid-row-gap: .5rem;
+
+      div{
+        display: flex;
+        height: 4rem;
+
+        .item-normal {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          box-sizing: border-box;
+          padding: .25rem;
+          flex: auto;
+
+          .title{
+            flex: auto;
+            align-items: center;
+          }
+
+          .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .5rem;
+            height: fit-content;     
+          }
+        }
+        
+      }
+
+      .div1 { 
+        grid-area: 1 / 1 / 2 / 2; 
+      }
+      .div2 { 
+        grid-area: 1 / 2 / 2 / 3; 
+      }
+      .div3 { 
+        grid-area: 1 / 3 / 2 / 5; 
+      }
+      .div4 { 
+        grid-area: 2 / 1 / 3 / 2; 
+      }
+      .div5 { 
+        grid-area: 2 / 2 / 3 / 3; 
+      }
+      .div6 { 
+        grid-area: 2 / 3 / 3 / 4; 
+      }
+      .div7 { 
+        grid-area: 2 / 4 / 3 / 5; 
+      }
+      .div8 { 
+        grid-area: 3 / 1 / 4 / 2; 
+      }
+      .div9 { 
+        grid-area: 3 / 2 / 4 / 3; 
+      }
+      .div10 { 
+        grid-area: 3 / 3 / 4 / 4; 
+      }
+      .div11 { 
+        grid-area: 3 / 4 / 4 / 5; 
+      }
+      .div12 { 
+        grid-area: 4 / 1 / 5 / 5; 
+      }
+    
+
+    }
+  }
+  @media (min-width: 576px) {
+    .wrapper-history {
+        width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+      .wrapper-history {
+          width: 720px;
+      }
+  }
+  @media (min-width: 992px) {
+      .wrapper-history {
+          width: 960px;
+      }
+  }
+  @media (min-width: 1200px) {
+      .wrapper-history {
+          width: 1140px;
+      }
+  }
+}
+
+.tn{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--neutral-400);
+}
+
+.cn{
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+
+  &#setprimary{
+    color: var(--primary-500);
+  }
+}
+
+.krw{
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--primary-400);
+}
+
+.inputdate {
+  @include input.dateinput();
+}

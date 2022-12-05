@@ -1,0 +1,118 @@
+import React from "react";
+import styled from "styled-components";
+import moment from "moment-timezone";
+import Axios from 'axios';
+import {useEffect, useState} from 'react';
+import Loading from "../Global/Loading";
+
+const St = {
+  Container: styled.article`
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-top: 10px;
+    @media ${({ theme }) => theme.mobileM} {
+      margin-top: 0;
+    }
+  `,
+  HiddenH3: styled.h3`
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0);
+    clip-path: polygon(0, 0);
+    overflow: hidden;
+    text-indent: -9999px;
+  `,
+  UserHistoryUL: styled.ul`
+    overflow-y: scroll;
+    scrollbar-color: ${(props) => props.scrollColor};
+    scrollbar-width: thin;
+    scrollbar-base-color: ${(props) => props.scrollColor};
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: white;
+      border-radius: 5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: ${(props) => props.scrollColor};
+      border-radius: 5rem;
+    }
+    height: 320px;
+  `,
+  UserHistoryTitle: styled.ul`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 25px;
+    background-color: ${({ theme }) => theme.lightGray1};
+    font-size: 0.9rem;
+
+    @media ${({ theme }) => theme.mobileS} {
+      font-size: 0.6rem;
+    }
+  `,
+  UserHistoryItem: styled.li`
+    width: 20%;
+
+    min-width: 58px;
+    text-align: ${({ textAlign }) => textAlign || "center"};
+    @media ${({ theme, mobileSNone }) => (mobileSNone ? theme.mobileS : true)} {
+      display: none;
+    }
+
+    @media ${({ theme, mobileMNone }) => (mobileMNone ? theme.mobileM : true)} {
+      display: none;
+    }
+
+    @media ${({ theme, mobileSNone }) => mobileSNone || theme.mobileS} {
+      width: 50%;
+    }
+  `,
+};
+const [viewContent, setViewContent] = useState([]);
+useEffect(()=>{
+    Axios.get('http://localhost:8000/api/getuser').then((response)=>{
+      setViewContent(response.data);
+    })
+  },[viewContent]);
+  const selecthistory = ({ theme, viewContent, isUserHistoryLoading }) => {
+    return (
+    <St.Container>
+      <St.HiddenH3>실시간 유저히스토리</St.HiddenH3>
+      <St.UserHistoryTitle bgColor={theme.lightGray1}>
+        <St.UserHistoryItem mobileSNone={true} textAlign={"center"}>
+          주문시각
+        </St.UserHistoryItem>
+        <St.UserHistoryItem>주문가격</St.UserHistoryItem>
+        <St.UserHistoryItem>주문량</St.UserHistoryItem>
+        <St.UserHistoryItem mobileMNone={true} textAlign={"right"}>
+          주문금액
+        </St.UserHistoryItem>
+      </St.UserHistoryTitle>
+      <St.UserHistoryUL scrollColor={theme.middleGray}>
+        {isUserHistoryLoading || !viewContent ? (
+          <Loading />
+        ) : (
+          viewContent.map(element => {
+            // const tradeAmount = new Decimal(tradeList.trade_volume) + "";
+            return (
+                <div>
+                    time={element.order_time},
+                    tradePrice={element.order_price},
+                    changePrice={element.order_totalprice},
+                    tradeAmount={element.order_count},
+                </div>
+
+              
+            );
+          
+            })
+          
+        )}
+      </St.UserHistoryUL>
+    </St.Container>
+  );
+};
+
+export default selecthistory();

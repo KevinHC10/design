@@ -1,0 +1,55 @@
+.flexedinfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    div {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: .5rem;
+
+    }
+
+    .item-bold{
+        padding: 1rem .5rem;
+    }
+
+    .content {
+        gap: .5rem;            
+    }
+
+    .tb{
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--neutral-500);
+    }
+
+    .cb {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary-500);
+    }
+
+    .tn{
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--neutral-400);
+    }
+
+    .cn{
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--black);
+    }
+
+    .krw{
+        font-size: .8rem;
+        font-weight: 700;
+        color: var(--neutral-500);
+    }
+
+}

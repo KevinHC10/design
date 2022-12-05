@@ -1,0 +1,23 @@
+@import "./../../styles/elements/ul.scss";
+@import "./../../styles/elements/flexedinfo.scss";
+
+.outaccount-wrapper{
+  padding: 100px;
+  font-size: 16px;
+  font-weight: 500;
+
+  .outaccount{
+    cursor: Pointer;
+    &:hover{
+      background: aquamarine;
+    }
+    .text-right{
+      text-align: right;
+    }
+  }
+}
+
+.section {
+  box-sizing: border-box;
+  height: 80vh !important;
+}

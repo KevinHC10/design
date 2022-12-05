@@ -1,0 +1,14 @@
+.orderlist-wrapper{
+  padding: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  .order{
+    cursor: Pointer;
+    &:hover{
+      background: aquamarine;
+    }
+    .text-right{
+      text-align: right;
+    }
+  }
+}

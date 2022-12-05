@@ -1,0 +1,88 @@
+.nav-container{
+    padding: 0;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .weblogo {
+        width: auto;
+        flex: auto;
+    }
+
+    .nav-buttons {
+        flex: auto;
+        margin: 0;
+        padding: 0; 
+
+        .nav-list{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            padding: 0; 
+            
+            .nav-item {
+                padding: .5em .6em;
+                list-style: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: .1s ease-out;
+                
+                a {
+                    color: var(--black);
+                    text-decoration: none;
+                }
+            }
+            .nav-item:hover {
+                background-color: var(--neutral-100);
+            }
+
+            .active {
+                cursor: pointer;
+                background-color: var(--primary-500);
+
+                a {
+                    color: var(--white);
+                }
+            }
+            .active:hover {
+                background-color: var(--primary-700);
+            }
+
+            .dropdown-menu{
+                display: none;
+                position: absolute;
+                list-style: none;
+                margin: .5rem 0 0 0;
+                padding: .5rem;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 32px 0px rgba(0,0,0,0.05);
+                z-index: 1;
+                border-radius: 16px;
+
+                li{
+                    padding: .5em .6em;
+                    border-radius: 8px;
+                    transition: .1s ease-out;
+                    a {
+                        text-decoration: none;
+                        color: var(--black);
+                    }
+                }
+                li:hover{
+                    background-color: var(--neutral-100);
+                }
+            }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+            
+        }
+    }
+
+}

@@ -1,0 +1,76 @@
+@mixin textinput {
+    outline: none;
+    border: 1px solid var(--neutral-200);
+
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .4rem .8rem;
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    background-color: var(--neutral-100);
+
+    transition: .1s ease-out;
+
+    color: var(--primary-500);
+
+
+    &::placeholder{
+        color: var(--neutral-400);
+    }
+
+
+    &:hover {
+        border: 1px solid var(--primary-500);
+    }
+
+    &:focus {
+        background-color: var(--white);
+        border: 1px solid var(--primary-500);
+        box-shadow: rgba(106, 76, 255, 0.3) 0px 3px 5px 0px, rgba(106, 76, 255, 0.15) 0px 2px 6px 2px;
+
+        
+    }
+    &::after {
+        color: var(--primary-500) !important;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+@mixin dateinput {
+    outline: none;
+    border: 1px solid var(--neutral-200);
+
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    background-color: var(--neutral-100);
+
+    transition: .1s ease-out;
+
+    color: var(--neutral-400) !important;
+
+    &::placeholder{
+        color: var(--neutral-400) !important;
+    }
+
+
+    &:hover {
+        border: 1px solid var(--primary-500);
+    }
+
+    &:focus {
+        background-color: var(--white);
+        border: 1px solid var(--primary-500);
+        box-shadow: rgba(106, 76, 255, 0.3) 0px 3px 5px 0px, rgba(106, 76, 255, 0.15) 0px 2px 6px 2px;
+        
+    }
+}

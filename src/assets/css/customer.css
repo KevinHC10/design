@@ -1,0 +1,106 @@
+.navbar {
+  top: 0px;
+}
+
+.navbar-brand img {
+  max-width: 130px;
+}
+
+.bg-home3 .bg-overlay {
+  background: unset;
+}
+
+.para-desc {
+  max-width: 650px;
+}
+
+.btn-blue {
+  color: #fff;
+  background-color: #023f97;
+  border-color: #3364ab;
+}
+
+.btn-flag {
+  padding: 0rem 0.5rem;
+}
+
+.auth-form .form-control {
+  color: #6c6c6c;
+  border: 1px solid #e2e5e8;
+}
+
+.form-floating>label {
+  padding-left: 20px;
+}
+
+.btn-sub {
+  padding: 0.85rem 1rem;
+}
+
+.btn-sub2 {
+  padding: 1.1rem 1rem;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+
+.page-title-box {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.bg-auth {
+  background-color: unset;
+}
+
+.bg-glay {
+  background-color: #ededed;
+}
+
+.flex-basis-650 {
+  flex-basis: 650px;
+}
+
+.border {
+  border: 1px solid #e7e7e7 !important;
+}
+
+.contact-form .form-control {
+  border-bottom: 1px solid #e2e5e8;
+}
+
+.auth-form .form-control input::placeholder {
+  color: red;
+  font-style: italic;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+input:-ms-input-placeholder {
+  color: #ccc;
+}
+
+
+
+@media (min-width: 1200px) {
+  .custom-container {
+    max-width: 1140px;
+  }
+
+  .h1,
+  h1 {
+    font-size: 2.2rem;
+  }
+}

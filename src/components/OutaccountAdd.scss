@@ -1,0 +1,24 @@
+.outaccount-wrapper {
+
+  .add-outaccount {
+    margin: 15px 0;
+    h1 {
+      font-weight: bold;
+      color: blueviolet;
+    }
+    .outaccount-input {
+      textarea {
+        resize: none;
+        height: 1em;
+      }
+      margin-bottom: 10px;
+    }
+  }
+  .outaccount-list{
+    padding: 15px;
+    background-color: white;
+    .outaccount-content{
+      font-size:1.5em;
+    }
+  }
+}

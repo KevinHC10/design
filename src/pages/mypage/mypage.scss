@@ -1,0 +1,210 @@
+@use "./../../styles/elements/button";
+
+.section {
+    
+    .wrapper{
+        background-color: white;
+
+        padding: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 2rem;
+
+        box-sizing: border-box;
+
+        .head-title{
+            p{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+
+        .information{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            box-sizing: border-box;
+
+            .title-cont > p{
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            .content-cont{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                gap: 1rem;
+                box-sizing: border-box;
+
+                .info-cont{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    box-sizing: border-box;
+                    padding: 0.5rem 0.5rem 0.5rem 1rem;
+                    gap: .5rem;
+
+                    border-radius: .5rem;
+
+                    &:hover{
+                        background-color: rgba(224, 224, 224, .25);
+                    }
+
+                    .title-info-cont {
+                        flex: 1.5;
+                        padding: .5rem;
+                        border-radius: .5rem;
+                        background-color: rgba(224, 224, 224, .25);
+
+                        p{
+                            text-align: end;
+                            font-weight: 500;
+                            color: var(--neutral-400);
+
+                        }
+                    }
+
+                    .content-info-cont{
+                        flex: 8.5;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .content-info{
+                            font-weight: 500;
+                            height: fit-content;
+                        }
+                        button {
+                            @include button.btn-style-btn;
+
+                            &.txtbtn {
+                                @include button.btn-style-txtbtn;
+                            }
+                        }
+                    }
+
+                    .main-info-cont{
+                        flex: 8.5;
+                        display: flex;
+                        flex-direction: column;
+
+                        .verification-cont{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            
+                            p {
+                                height: fit-content;
+                            }
+                            .txtbtn{
+                                @include button.btn-style-txtbtn;
+                            }
+                        }
+
+                        .content-info-cont{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: center;
+                            box-sizing: border-box;
+                            gap: 1rem;
+                            padding: 1rem;
+
+                            .content-info{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                gap: .5rem;
+
+                                .content-title{
+                                    font-size: .8rem;
+                                    color: var(--neutral-400);
+                                }
+                                .content-content{
+                                    color: var(--primary-500);
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .settings {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            box-sizing: border-box;
+
+            .title-cont > p{
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            .scard-container{
+                display: flex;
+                flex-direction: row;
+                box-sizing: border-box;
+
+                .setting-card{
+                    flex: 1;
+
+                    display: flex;
+                    flex-direction: column;
+
+
+                }
+
+            }
+        }
+
+        
+    }
+    @media (min-width: 576px) {
+        .wrapper {
+            width: 540px;
+        }
+    }
+    @media (min-width: 768px) {
+        .wrapper {
+            width: 720px;
+        }
+    }
+    @media (min-width: 992px) {
+        .wrapper {
+            width: 960px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .wrapper {
+            width: 1140px;
+        }
+    }
+}
+
+#not-verified{
+                                
+    font-size: .8rem;
+    padding: .4rem .8rem;
+    border-radius: 5rem;
+    background-color: var(--neutral-100);
+    color: var(--neutral-400);
+}
+
+#verified{
+    font-size: .8rem;
+    padding: .4rem .8rem;
+    border-radius: 5rem;
+    background-color: #DCFAE8;
+    color: var(--success-500);
+}

@@ -1,0 +1,229 @@
+.navbar {
+    position: absolute;
+    width: 1920px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: #FDFCFA;
+  }
+  .navbar .nav-wrapper {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 681px;
+    position: absolute;
+    width: 1080px;
+    height: 52px;
+    left: 420px;
+    top: 24px;
+  }
+  .navbar .nav-wrapper .logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    width: 173.66px;
+    height: 47.41px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .logo-wrapper .logo {
+    width: 43.15px;
+    height: 32px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .logo-wrapper .bitline {
+    width: 119px;
+    height: 48px;
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 48px;
+    color: linear-gradient(0deg, #6A4CFF, #6A4CFF), linear-gradient(0deg, #000000, #000000);
+    transform: matrix(0.99, 0, -0.16, 1, 0, 0);
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .nav_right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 10px;
+    gap: 10px;
+    width: 811px;
+    height: 52px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .nav_right #home_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 8px;
+    width: 110px;
+    height: 52px;
+    /* Primary / 100 */
+    background: #E7DEFF;
+    border-radius: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .nav_right #home_btn #button_text {
+    width: 46px;
+    height: 20px;
+    /* Button/Button 1/700 */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    /* Primary / 500 */
+    color: #6A4CFF;
+  }
+  .navbar .nav-wrapper .nav_right #exchange_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 8px;
+    width: 139px;
+    height: 52px;
+    /* White */
+    background: #FDFCFA;
+    border-radius: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .nav_right #exchange_btn #button_txt {
+    width: 75px;
+    height: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    /* Neutral / 700 */
+    color: #3C3C3C;
+  }
+  .navbar .nav-wrapper .nav_right #news_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 8px;
+    width: 108px;
+    height: 52px;
+    /* White */
+    background: #FDFCFA;
+    border-radius: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .nav_right #news_btn #btntxt {
+    width: 44px;
+    height: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    /* Neutral / 700 */
+    color: #3C3C3C;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .nav_right #login_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 8px;
+    width: 108px;
+    height: 52px;
+    /* White */
+    background: #FDFCFA;
+    border-radius: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+  }
+  .navbar .nav-wrapper .nav_right #login_btn #btntxt {
+    width: 44px;
+    height: 20px;
+    /* Button/Button 1/700 */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    /* Neutral / 400 */
+    color: #979797;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .content-wrap {
+    position: absolute;
+    width: 1920px;
+    height: 823px;
+    left: 0px;
+    top: 100px;
+    background: url(contentbg.png);
+  }
+  .content-wrap .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 36px;
+    position: absolute;
+    width: 1425px;
+    height: 314px;
+    left: 248px;
+    top: 258px;
+  }
+  .content-wrap .content .left {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 16px;
+    width: 919px;
+    height: 314px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }

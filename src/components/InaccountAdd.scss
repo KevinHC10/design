@@ -1,0 +1,24 @@
+.inaccount-wrapper {
+
+  .add-inaccount {
+    margin: 15px 0;
+    h1 {
+      font-weight: bold;
+      color: blueviolet;
+    }
+    .inaccount-input {
+      textarea {
+        resize: none;
+        height: 1em;
+      }
+      margin-bottom: 10px;
+    }
+  }
+  .inaccount-list{
+    padding: 15px;
+    background-color: white;
+    .inaccount-content{
+      font-size:1.5em;
+    }
+  }
+}
